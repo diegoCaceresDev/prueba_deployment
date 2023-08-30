@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+<header class="py-3 mb-3 border-bottom">
+    <div class="d-flex mb-3 " style="grid-template-columns: 1fr 2fr; height: 20px">
+        <div class="dropdown me-auto p-2">
+            <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="https://yt3.googleusercontent.com/ytc/AOPolaRxmIP5pSnCo3Fd_B8e8EuA-cfrt-B113qG8HzqmA=s176-c-k-c0x00ffffff-no-rj"
+                    alt="">
+                <span class="fs-4 ms-2 tv-show">TV Shows</span>
+            </a>
+        </div>
+
+
+        <div class="flex-shrink-0 dropdown p-2">
+            <a href="{{url_for('shows')}}" class="btn btn-success me-2">Shows</a>
+        </div>
+
+        <div class="flex-shrink-0 dropdown p-2">
+            <a href="{{url_for('salir')}}" class="btn btn-danger">Log out</a>
+        </div>
+    </div>
+</header>
+
+
+{% endblock %}
+
+{% block estilos %}
+{% endblock %}
+
+
+
+{% block contenido %}
+
+<h1>Edit TV show</h1>
+
+<main class="form-login w-100 ">
+    <form action="{{ url_for('edit_by_id', id= show.id)}}", method="post">
+        <div class="mb-3">
+            <label for="title"  class="form-label">Title:</label>
+            <input type="text" class="form-control" name="title" id="title" value="{{show.title}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="Network"  class="form-label">Network:</label>
+            <input type="text" class="form-control" name="network" id="Network" value="{{show.network}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="release_date"  class="form-label">Release date:</label>
+            <input type="date"  name="released_date" id="release_date" value="{{show.release_date}}" required>
+        </div>        
+
+        <div class="mb-3">
+            <label for="description"  class="form-label">Description:</label>
+        <textarea cols="20" rows="5" type="text" class="form-control" name="description" id="description" >{{show.description}}</textarea>
+        </div>  
+
+        <button class="btn btn-primary w-100 py-2" type="submit">Edit show</button>
+    </form>
+
+
+</main>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

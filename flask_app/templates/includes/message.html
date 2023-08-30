@@ -1,0 +1,15 @@
+<script>
+
+toastr.options = {
+    "closeButton": true,
+    "progressBar": true,
+}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            toastr.{{category}}("{{message}}", "Mensaje del Sistema");
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+</script>

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+{% endblock %}
+
+{% block estilos %}
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="https://yt3.googleusercontent.com/ytc/AOPolaRxmIP5pSnCo3Fd_B8e8EuA-cfrt-B113qG8HzqmA=s176-c-k-c0x00ffffff-no-rj" alt="">
+            <span class="fs-4 ms-2" tv-show>TV Shows</span>
+        </a>
+
+    </header>
+</div>
+{% endblock %}
+
+
+
+{% block contenido %}
+
+<main class="form-register w-100 ">
+    <form action="/procesar_registro" method="post">
+        <h1 class="h3 mb-3 fw-normal">Please complete the register form</h1>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" name="first_name" placeholder="Diego">
+            <label for="floatingInput">First Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" name="last_name" placeholder="Caceres">
+            <label for="floatingInput">Last Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" name="confirmar_password" placeholder="Password">
+            <label for="floatingPassword">Confirm your Password</label>
+        </div>
+
+        <button class="btn btn-success w-100 py-2" type="submit">Sign up</button>
+        <p class="mt-5 mb-3 text-muted">© Coding Dojo 2023</p>
+    </form>
+
+
+</main>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

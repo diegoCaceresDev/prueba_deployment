@@ -1,0 +1,30 @@
+.form-login {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 5%;
+    border: 2px solid gainsboro
+}
+
+.form-register {
+    width: 100%;
+    max-width: 440px;
+    padding: 15px;
+    margin: auto;
+    border: 2px solid gainsboro
+}
+
+header img {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+}
+
+.tv-show {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: rgb(120, 116, 116);
+    text-shadow: 2px 2px 2px black;
+
+}

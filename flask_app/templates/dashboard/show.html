@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+<header class="py-3 mb-3 border-bottom">
+    <div class="d-flex mb-3 " style="grid-template-columns: 1fr 2fr; height: 20px">
+        <div class="dropdown me-auto p-2">
+            <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="https://yt3.googleusercontent.com/ytc/AOPolaRxmIP5pSnCo3Fd_B8e8EuA-cfrt-B113qG8HzqmA=s176-c-k-c0x00ffffff-no-rj"
+                    alt="">
+                <span class="fs-4 ms-2 tv-show">TV Shows</span>
+            </a>
+        </div>
+
+
+        <div class="flex-shrink-0 dropdown p-2">
+            <a href="{{url_for('shows')}}" class="btn btn-success me-2">Shows</a>
+        </div>
+
+        <div class="flex-shrink-0 dropdown p-2">
+            <a href="{{url_for('salir')}}" class="btn btn-danger">Log out</a>
+        </div>
+    </div>
+</header>
+
+{% endblock %}
+
+{% block estilos %}
+{% endblock %}
+
+
+
+{% block contenido %}
+
+<div class="container mt-5">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>{{show.title}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><ul>
+                    <li>Network: {{show.network}}</li>
+                    <li>Release Date: {{show.released_date}}</li>
+                    <li>Description: {{show.description}}</li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td>Posted by: {{show.author[0]['first_name']}} {{show.author[0]['last_name']}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
